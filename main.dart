@@ -484,4 +484,55 @@ print(juice); // prints [apple, banana, orange, mango]
 juice.remove("apple");
 print(juice); // prints [banana, orange, mango]
 
+// Sets: Demonstrates how to use sets in Dart, which are collections of unique elements.
+Set<String> fruitsSet = {"apple", "banana", "orange"};
+print(fruitsSet.length); // prints 3
+print(fruitsSet.contains("banana")); // prints true
+fruitsSet.add("mango");
+print(fruitsSet); // prints {apple, banana, orange, mango}
+fruitsSet.remove("apple");
+print(fruitsSet); // prints {banana, orange, mango}
+// This demonstrates how sets in Dart store unique elements and provide methods to check for membership, add elements, and remove elements, ensuring that each element in the set is unique.
+
+// Creating Sets: Demonstrates how to create sets in Dart and the uniqueness property of sets.
+Set<int> numbersSet = {1, 2, 3, 3, 4};
+print(numbersSet); // prints {1, 2, 3, 4} (duplicates are removed)
+// This demonstrates how sets in Dart automatically remove duplicate elements, ensuring that each element in the set is unique.
+
+// Adding Elements to Sets: Demonstrates how to add elements to a set and the uniqueness property.
+numbersSet.add(5);
+numbersSet.add(3); // duplicate, will not be added
+print(numbersSet); // prints {1, 2, 3, 4, 5}
+// This demonstrates how adding elements to a set respects the uniqueness property, where duplicate elements are not added to the set.
+
+// Removing Elements from Sets: Demonstrates how to remove elements from a set and the uniqueness property.
+numbersSet.remove(4);
+print(numbersSet); // prints {1, 2, 3, 5}
+// This demonstrates how removing elements from a set works and that the set maintains its uniqueness property after removal.
+// Iterating Over Sets: Demonstrates how to iterate over elements in a set.
+for (var number in numbersSet) {
+  print("Number in set: $number");
+}
+// This demonstrates how you can iterate over the elements of a set using a for-in loop, accessing each element in the set.
+// This concludes the demonstration of sets in Dart, showing how to create sets, add and remove elements, and iterate over the elements while maintaining the uniqueness property of sets.
+// Maps: Demonstrates how to use maps in Dart, which are collections of key-value pairs.
+Map<String, int> ages = {"Alice": 30, "Bob": 25};
+print(ages["Alice"]); // prints 30
+ages["Charlie"] = 35;
+print(ages); // prints {Alice: 30, Bob: 25, Charlie: 35}
+ages.remove("Bob");
+print(ages); // prints {Alice: 30, Charlie: 35}
+// This demonstrates how maps in Dart store key-value pairs and provide methods to access, add, and remove entries.
+
+// Iterating Over Maps: Demonstrates how to iterate over key-value pairs in a map.
+for (var entry in ages.entries) {
+  print("${entry.key}: ${entry.value}");
+}
+// This demonstrates how you can iterate over the entries of a map using a for-in loop, accessing both the key and value of each entry.
+
+// This concludes the demonstration of maps in Dart, showing how to create maps, access, add, remove entries, and iterate over the key-value pairs. 
+// This concludes the demonstration of basic data structures in Dart, including lists, sets, and maps, showing how to create, manipulate, and iterate over these collections.
+
+
+
 }
