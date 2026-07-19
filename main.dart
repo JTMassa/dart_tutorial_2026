@@ -474,5 +474,14 @@ numbers.forEach((number) {
 // The anonymous function is passed to the forEach method and executed for each element in the list, printing the numbers.
 // This demonstrates how anonymous functions can be used to define behavior inline without needing to create a named function, making the code more concise and readable.
 
+// List Properties and Methods: Demonstrates how to use various properties and methods of lists in Dart.
+List<String> juice = ["apple", "banana", "orange"];
+print(juice.length); // prints 3
+print(juice.isEmpty); // prints false
+print(juice.contains("banana")); // prints true
+juice.add("mango");
+print(juice); // prints [apple, banana, orange, mango]
+juice.remove("apple");
+print(juice); // prints [banana, orange, mango]
 
 }
