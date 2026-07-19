@@ -350,5 +350,92 @@ do{
 }while(k < 5);
 // The do-while loop executes the block of code at least once and then continues to execute it as long as the condition (k < 5) is true, incrementing 'k' in each iteration.
 
+// The ForEach loop: Demonstrates how to use the forEach method to iterate over elements in a collection.
+List<String> colors = ["red", "green", "blue"];
+colors.forEach((color) {
+  print("Color: $color");
+});
+// The forEach method iterates over each element in the list 'colors' and executes the provided function for each element, printing the color values.
+
+// Functions: Demonstrates how to define and use functions in Dart.
+// Functions allow you to encapsulate reusable blocks of code that can be called with different arguments.
+// Example of a simple function:
+void greet(String name) {
+  print("Hello, $name!");
+}
+
+greet("Alice"); // prints "Hello, Alice!"
+greet("Bob"); // prints "Hello, Bob!"
+
+// Function Parameters: Demonstrates how to define functions with parameters to accept input values.
+// Function parameters allow you to pass data into a function so that it can perform operations based on the input values.
+// In the example above, the 'greet' function takes a 'name' parameter and prints a greeting message using that parameter.
+// You can define functions with multiple parameters, optional parameters, and named parameters to make your functions more flexible and adaptable to different use cases.
+// Example of a function with multiple parameters:
+int add(int a, int b) {
+  return a + b;
+}
+
+print(add(5, 3)); // prints 8
+
+// Example of a function with optional parameters:
+int multiply(int a, [int b = 1]) {
+  return a * b;
+}
+
+print(multiply(5)); // prints 5 (b uses default value 1)
+print(multiply(5, 3)); // prints 15
+// Example of a function with named parameters:
+int divide({required int a, required int b}) {
+  return a ~/ b;
+}
+
+print(divide(a: 10, b: 2)); // prints 5
+
+// Example of required named parameters:
+int subtract({required int a, required int b}) {
+  return a - b;
+}
+
+print(subtract(a: 10, b: 3)); // prints 7
+
+// Example of optional named parameters:
+int power({required int base, int exponent = 2}) {
+  int result = 1;
+  for (int i = 0; i < exponent; i++) {
+    result *= base;
+  }
+  return result;
+}
+
+print(power(base: 3)); // prints 9 (exponent uses default value 2)
+print(power(base: 2, exponent: 3)); // prints 8
+// This demonstrates how optional named parameters allow you to provide default values for parameters that may not be supplied when calling the function, making the function more flexible and adaptable to different use cases.
+// In summary, Dart functions can have positional parameters, optional parameters, and named parameters, each providing different ways to pass arguments to functions. This flexibility allows you to design functions that are easy to use and adaptable to various scenarios.
+
+// Named Parameters: Demonstrates how to define and use named parameters in functions.
+// Named parameters allow you to specify arguments by name when calling a function, improving readability and flexibility.
+
+// Example of a function with named parameters:
+void introduce({required String name, required int age}) {
+  print("My name is $name and I am $age years old.");
+}
+
+introduce(name: "Alice", age: 30);
+introduce(age: 25, name: "Bob");
+
+// This demonstrates how named parameters allow you to specify arguments by name when calling a function, improving readability and making it clear which value corresponds to which parameter.
+// This concludes the demonstration of named parameters in Dart functions, showing how they can improve code readability and flexibility by allowing arguments to be specified by name rather than position.
+
+// Default Parameters: Demonstrates how to define functions with default parameter values.
+// Default parameters allow you to specify a value that will be used if no argument is provided for that parameter when calling the function.
+
+// Example of a function with default parameters:
+void salutWithDefault(String name, [String greeting = "Hello"]) {
+  print("$greeting, $name!");
+}
+
+salutWithDefault("Alice"); // prints "Hello, Alice!" (uses default greeting)
+salutWithDefault("Bob", "Hi"); // prints "Hi, Bob!" (overrides default greeting)
 
 }
