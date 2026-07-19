@@ -438,4 +438,14 @@ void salutWithDefault(String name, [String greeting = "Hello"]) {
 salutWithDefault("Alice"); // prints "Hello, Alice!" (uses default greeting)
 salutWithDefault("Bob", "Hi"); // prints "Hi, Bob!" (overrides default greeting)
 
+// Arrow Functions: Demonstrates how to define concise functions using the arrow syntax.
+// Arrow functions provide a shorthand way to write functions that consist of a single expression.
+
+// Example of an arrow function:
+int square(int x) => x * x;
+
+print(square(5)); // prints 25
+
+// This demonstrates how arrow functions provide a concise way to define functions that consist of a single expression, improving code readability and reducing boilerplate.  
+
 }
