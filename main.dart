@@ -448,4 +448,31 @@ print(square(5)); // prints 25
 
 // This demonstrates how arrow functions provide a concise way to define functions that consist of a single expression, improving code readability and reducing boilerplate.  
 
+// Higher-Order Functions: Demonstrates how to define and use higher-order functions in Dart.
+// Higher-order functions are functions that can take other functions as parameters or return functions as results.
+
+// Example of a higher-order function:
+void performOperation(int a, int b, int Function(int, int) operation) {
+  int result = operation(a, b);
+  print("Result: $result");
+}
+
+performOperation(5, 3, add); // prints "Result: 8"
+performOperation(10, 2, (a, b) => divide(a: a, b: b)); // prints "Result: 5"
+performOperation(10, 3, (a, b) => subtract(a: a, b: b)); // prints "Result: 7"
+performOperation(3, 3, (x, y) => x * y); // prints "Result: 9"
+// This demonstrates how higher-order functions allow you to pass functions as arguments to other functions, enabling flexible and reusable code patterns. In this example, 'performOperation' takes a function as a parameter and applies it to the provided arguments, showing how different operations can be performed dynamically.
+
+// Anonymous Functions: Demonstrates how to define and use anonymous functions in Dart.
+// Anonymous functions are functions without a name, often used as arguments to higher-order functions.
+
+// Example of an anonymous function:
+List<int> numbers = [1, 2, 3, 4, 5];
+numbers.forEach((number) {
+  print("Number: $number");
+});
+// The anonymous function is passed to the forEach method and executed for each element in the list, printing the numbers.
+// This demonstrates how anonymous functions can be used to define behavior inline without needing to create a named function, making the code more concise and readable.
+
+
 }
