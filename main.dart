@@ -583,5 +583,37 @@ void demonstratePerson() {
   frank.introduce(); // prints "My name is Frank and I am 45 years old."
   // This demonstrates how encapsulation allows you to control access to the internal state of an object, providing a way to interact with the object's data through public methods while keeping the fields private.
   // This concludes the demonstration of object-oriented programming concepts in Dart, showing how to define classes, create instances, use constructors, and apply encapsulation to manage access to object properties.
-  
 }
+
+// Polymorphism: Demonstrates how to use polymorphism in Dart by defining a base class and overriding methods in derived classes.
+// Polymorphism allows objects of different classes to be treated as objects of a common base class, enabling dynamic method dispatch.
+// Example of polymorphism:
+class Animal {
+  void makeSound() {
+    print("Some generic animal sound");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void makeSound() {
+    print("Woof!");
+  }
+}
+
+class Cat extends Animal {
+  @override
+  void makeSound() {
+    print("Meow!");
+  }
+}
+
+void demonstratePolymorphism() {
+  Animal myDog = Dog();
+  Animal myCat = Cat();
+
+  myDog.makeSound(); // prints "Woof!"
+  myCat.makeSound(); // prints "Meow!"
+  // This demonstrates how polymorphism allows you to call the same method on different types of objects, and the correct method implementation is invoked based on the actual object type.
+}
+
