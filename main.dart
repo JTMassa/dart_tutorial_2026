@@ -533,6 +533,55 @@ for (var entry in ages.entries) {
 // This concludes the demonstration of maps in Dart, showing how to create maps, access, add, remove entries, and iterate over the key-value pairs. 
 // This concludes the demonstration of basic data structures in Dart, including lists, sets, and maps, showing how to create, manipulate, and iterate over these collections.
 
+// Exception Handling: Demonstrates how to handle exceptions in Dart using try-catch blocks.
 
+// Example of exception handling:
+try {
+  int result = 10 ~/ 0; // This will throw an exception (division by zero)
+  print(result);
+} catch (e) {
+  print("An error occurred: $e");
+}
+// This demonstrates how to use a try-catch block to handle exceptions in Dart, allowing the program to catch and respond to errors gracefully instead of crashing.
 
+// Object Oriented Programming: Demonstrates how to define and use classes and objects in Dart.
+
+}
+
+// Example of a simple class:
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+
+  void introduce() {
+    print("My name is $name and I am $age years old.");
+  }
+}
+
+void demonstratePerson() {
+  Person alice = Person("Alice", 30);
+  alice.introduce(); // prints "My name is Alice and I am 30 years old."
+
+  Person bob = Person("Bob", 25);
+  bob.introduce(); // prints "My name is Bob and I am 25 years old."
+  // This demonstrates how to define a class in Dart with properties and methods, create instances of the class, and call methods on those instances to interact with the object's data.
+  
+  // Default Constructor: Demonstrates how to define a default constructor in a Dart class.
+  Person charlie = Person("Charlie", 40);
+  charlie.introduce(); // prints "My name is Charlie and I am 40 years old."
+  // This demonstrates how the default constructor is used to create an instance of the class with the specified property values.
+
+  // Parameterized constructor: Demonstrates how to define a parameterized constructor in a Dart class.
+  Person dave = Person("Dave", 50);
+  dave.introduce(); // prints "My name is Dave and I am 50 years old."
+  // This demonstrates how the parameterized constructor allows you to create an instance of the class with specific property values passed as arguments. 
+
+// Encapsulation: Demonstrates how to use encapsulation in a Dart class by defining private fields and providing public getters and setters.
+  Person frank = Person("Frank", 45);
+  frank.introduce(); // prints "My name is Frank and I am 45 years old."
+  // This demonstrates how encapsulation allows you to control access to the internal state of an object, providing a way to interact with the object's data through public methods while keeping the fields private.
+  // This concludes the demonstration of object-oriented programming concepts in Dart, showing how to define classes, create instances, use constructors, and apply encapsulation to manage access to object properties.
+  
 }
