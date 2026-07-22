@@ -617,3 +617,24 @@ void demonstratePolymorphism() {
   // This demonstrates how polymorphism allows you to call the same method on different types of objects, and the correct method implementation is invoked based on the actual object type.
 }
 
+// Enumerations: Demonstrates how to use enumerations in Dart to define a set of named values.
+// example
+enum TrafficLight {
+  red(30),
+  yellow(5),
+  green(25);
+
+  final int duration;
+  const TrafficLight(this.duration);
+
+  void display() {
+    print('$name light stays for $duration seconds.');
+  }
+}
+
+void demonstrateEnumerations() {
+  TrafficLight.green.display();
+  TrafficLight.yellow.display();
+  TrafficLight.red.display();
+}
+
